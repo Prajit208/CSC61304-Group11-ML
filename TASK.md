@@ -1,16 +1,31 @@
 # CSC61304 Group 11: roject Tasks & Overview
 
 ## Project Overview
-
-This project applies machine learning to predict earthquake building damage severity in Nepal, based on data collected after the devastating 2015 Gorkha earthquake (magnitude 7.8). Using building characteristics such as foundation type, roof type, construction material, and geographic location, we train and compare five ML models to classify buildings into three damage grades.
-
-The findings are intended to support Nepal's National Disaster Risk Reduction Authority (NDRRNA) in identifying high-risk structures, prioritizing retrofitting efforts, and improving pre-disaster preparedness across Nepal's 77 districts.
-
+ 
+This project applies machine learning to predict literacy and educational outcomes in Nepal, using data from the National Population and Housing Census 2021 (NPHC 2021). By analyzing school attendance, literacy status, and educational attainment across Nepal's 753 local levels, we train and compare five ML models to identify at-risk populations and predict literacy outcomes.
+ 
+The findings are intended to support Nepal's Ministry of Education in identifying underserved local levels, targeting literacy programs, and allocating educational resources to reduce dropout rates across the country.
+ 
 ## Case Study Track
-
-**Track:** Track 5 — ML for Disaster Preparedness  
-**Client:** Nepal National Disaster Risk Reduction Authority (NDRRNA)  
-**Problem:** Predict the level of earthquake damage to buildings to support pre-disaster risk mapping and resource allocation
+ 
+**Track:** Track 4 — ML for Education & Student Success  
+**Client:** Nepal Ministry of Education  
+**Objective:** To apply machine learning algorithms on Nepal's 2021 Census education data to predict literacy outcomes and identify at-risk populations across Nepal's 753 local levels.
+ 
+## Dataset
+ 
+**Source:** National Statistics Office (NSO) Nepal — National Population and Housing Census 2021  
+**Portal:** https://censusresults.nsonepal.gov.np/downloads/census-dataset
+ 
+Three individual-level census tables are merged on common keys (`prov`, `dist`, `gapa`, `sex`, `agegrp`):
+ 
+- **Table 17 (Literacy Status)** — literacy outcome of the population (can read/write, read only, or illiterate)
+- **Table 18 (Educational Attainment)** — how far people progressed through the education system (primary, secondary, graduate etc.)
+- **Table 19 (School Attendance)** — who is currently attending school, who dropped out, and who never attended
+**Rows:** 60,000+  
+**Features:** 15–21 after feature selection
+ 
+See `DATASET_DOCUMENTATION.md` for full column details and merging strategy. (Not done yet)
 
 ## ML Pipeline
 
